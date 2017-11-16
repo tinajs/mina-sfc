@@ -33,7 +33,7 @@ exports.parse = function parse (source) {
   }
 
   SPECIAL_TAG.forEach((tag) => {
-    sfc[tag] = last(blocks, (block) => block.type === tag)
+    sfc[tag] = last(blocks, (block) => block.type === tag) || null
   })
 
   return sfc
