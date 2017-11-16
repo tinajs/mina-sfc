@@ -1,0 +1,16 @@
+{
+  "name": "@tinajs/mina-sfc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test/test.js"
+  },
+  "author": "yelo",
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
