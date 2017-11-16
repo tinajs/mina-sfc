@@ -24,7 +24,7 @@ exports.parse = function parse (source) {
       return {
         type: node.tagName,
         content: trim(parse5.serialize(node.content || node)),
-        attrs: node.attrs,
+        attributes: node.attrs,
       }
     })
 

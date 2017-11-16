@@ -32,45 +32,74 @@ test('basic', async(t) => {
     "_blocks": [{
       "type": "config",
       "content": "{\n      \"name\": \"mina\"\n    }",
-      "attrs": []
+      "attributes": []
     }, {
       "type": "style",
       "content": "text.blue {\n      color: #00f;\n      background: url(logo.png);\n    }",
-      "attrs": []
+      "attributes": []
     }, {
       "type": "template",
       "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <img src=\"logo.png\">\n      </view>",
-      "attrs": [{
+      "attributes": [{
         "name": "a",
         "value": "hello"
       }]
     }, {
       "type": "script",
       "content": "console.log('meow~')",
-      "attrs": []
+      "attributes": []
     }],
     "config": {
       "type": "config",
       "content": "{\n      \"name\": \"mina\"\n    }",
-      "attrs": []
+      "attributes": []
     },
     "script": {
       "type": "script",
       "content": "console.log('meow~')",
-      "attrs": []
+      "attributes": []
     },
     "style": {
       "type": "style",
       "content": "text.blue {\n      color: #00f;\n      background: url(logo.png);\n    }",
-      "attrs": []
+      "attributes": []
     },
     "template": {
       "type": "template",
       "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <img src=\"logo.png\">\n      </view>",
-      "attrs": [{
+      "attributes": [{
         "name": "a",
         "value": "hello"
       }]
     }
+  })
+})
+
+test('some blocks missing', async(t) => {
+  t.deepEqual(parse(`
+    <config>{}</config>
+    <script>console.log('meow~')</script>
+  `), {
+    "_blocks": [{
+      "type": "config",
+      "content": "{}",
+      "attributes": []
+    }, {
+      "type": "script",
+      "content": "console.log('meow~')",
+      "attributes": []
+    }],
+    "config": {
+      "type": "config",
+      "content": "{}",
+      "attributes": []
+    },
+    "script": {
+      "type": "script",
+      "content": "console.log('meow~')",
+      "attributes": []
+    },
+    "style": null,
+    "template": null
   })
 })
