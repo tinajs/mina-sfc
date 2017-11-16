@@ -103,3 +103,8 @@ test('some blocks missing', async(t) => {
     "template": null
   })
 })
+
+test('should not convert <image /> to <img>', async(t) => {
+  let template = '<image />'
+  t.deepEqual(parse(`<template>${template}</template>`).template.content, template)
+})
