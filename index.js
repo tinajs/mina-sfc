@@ -1,5 +1,7 @@
-const parse5 = require('parse5')
+const fs = require('fs')
 const last = require('lodash.findlast')
+const parser = require('posthtml-parser')
+const render = require('posthtml-render')
 
 const SPECIAL_TAG = [
   'config',
@@ -16,15 +18,15 @@ function trim (value) {
 }
 
 exports.parse = function parse (source) {
-  const root = parse5.parseFragment(source)
+  const nodes = parser(source)
 
-  const blocks = root.childNodes
-    .filter((node) => node.tagName)
+  const blocks = nodes
+    .filter((node) => node.tag)
     .map((node) => {
       return {
-        type: node.tagName,
-        content: trim(parse5.serialize(node.content || node)),
-        attributes: node.attrs,
+        type: node.tag,
+        content: trim(render(node.content)),
+        attributes: node.attrs || [],
       }
     })
 

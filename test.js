@@ -21,7 +21,7 @@ test('basic', async(t) => {
     <template a="hello">
       <view>
         <text class="blue">{{msg}}</text>
-        <image src="logo.png" />
+        <image src="logo.png"></image>
       </view>
     </template>
 
@@ -39,11 +39,10 @@ test('basic', async(t) => {
       "attributes": []
     }, {
       "type": "template",
-      "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <img src=\"logo.png\">\n      </view>",
-      "attributes": [{
-        "name": "a",
-        "value": "hello"
-      }]
+      "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <image src=\"logo.png\"></image>\n      </view>",
+      "attributes": {
+        "a": "hello"
+      }
     }, {
       "type": "script",
       "content": "console.log('meow~')",
@@ -66,11 +65,10 @@ test('basic', async(t) => {
     },
     "template": {
       "type": "template",
-      "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <img src=\"logo.png\">\n      </view>",
-      "attributes": [{
-        "name": "a",
-        "value": "hello"
-      }]
+      "content": "<view>\n        <text class=\"blue\">{{msg}}</text>\n        <image src=\"logo.png\"></image>\n      </view>",
+      "attributes": {
+        "a": "hello"
+      }
     }
   })
 })
@@ -106,5 +104,5 @@ test('some blocks missing', async(t) => {
 
 test('should not convert <image /> to <img>', async(t) => {
   let template = '<image />'
-  t.deepEqual(parse(`<template>${template}</template>`).template.content, template)
+  t.deepEqual(parse(`<template>${template}</template>`).template.content, '<image></image>')
 })

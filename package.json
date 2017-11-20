@@ -14,10 +14,11 @@
     }
   },
   "dependencies": {
-    "parse5": "^3.0.3"
+    "lodash.findlast": "^4.6.0",
+    "posthtml-parser": "^0.2.1",
+    "posthtml-render": "^1.0.6"
   },
   "devDependencies": {
-    "ava": "^0.23.0",
-    "lodash.findlast": "^4.6.0"
+    "ava": "^0.23.0"
   }
 }
