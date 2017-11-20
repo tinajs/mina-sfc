@@ -2,6 +2,7 @@ const fs = require('fs')
 const last = require('lodash.findlast')
 const parser = require('posthtml-parser')
 const render = require('posthtml-render')
+const { parseComponent } = require('vue-template-compiler')
 
 const SPECIAL_TAG = [
   'config',
@@ -18,6 +19,7 @@ function trim (value) {
 }
 
 exports.parse = function parse (source) {
+  const vue = parseComponent(source)
   const nodes = parser(source)
 
   const blocks = nodes
@@ -37,6 +39,10 @@ exports.parse = function parse (source) {
   SPECIAL_TAG.forEach((tag) => {
     sfc[tag] = last(blocks, (block) => block.type === tag) || null
   })
+
+  if (sfc.template && vue.template) {
+    sfc.template.content = trim(vue.template.content)
+  }
 
   return sfc
 }
