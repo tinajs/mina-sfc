@@ -1,6 +1,6 @@
 {
   "name": "@tinajs/mina-sfc",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,13 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinajs/mina-sfc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tinajs/mina-sfc/issues"
   },
   "dependencies": {
     "lodash.findlast": "^4.6.0",
