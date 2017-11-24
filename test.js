@@ -32,11 +32,11 @@ test('basic', async(t) => {
     "_blocks": [{
       "type": "config",
       "content": "{\n      \"name\": \"mina\"\n    }",
-      "attributes": []
+      "attributes": {}
     }, {
       "type": "style",
       "content": "text.blue {\n      color: #00f;\n      background: url(logo.png);\n    }",
-      "attributes": []
+      "attributes": {}
     }, {
       "type": "template",
       "content": "<view>\n  <text class=\"blue\">{{msg}}</text>\n  <image src=\"logo.png\" />\n</view>",
@@ -46,22 +46,22 @@ test('basic', async(t) => {
     }, {
       "type": "script",
       "content": "console.log('meow~')",
-      "attributes": []
+      "attributes": {}
     }],
     "config": {
       "type": "config",
       "content": "{\n      \"name\": \"mina\"\n    }",
-      "attributes": []
+      "attributes": {}
     },
     "script": {
       "type": "script",
       "content": "console.log('meow~')",
-      "attributes": []
+      "attributes": {}
     },
     "style": {
       "type": "style",
       "content": "text.blue {\n      color: #00f;\n      background: url(logo.png);\n    }",
-      "attributes": []
+      "attributes": {}
     },
     "template": {
       "type": "template",
@@ -81,21 +81,21 @@ test('some blocks missing', async(t) => {
     "_blocks": [{
       "type": "config",
       "content": "{}",
-      "attributes": []
+      "attributes": {}
     }, {
       "type": "script",
       "content": "console.log('meow~')",
-      "attributes": []
+      "attributes": {}
     }],
     "config": {
       "type": "config",
       "content": "{}",
-      "attributes": []
+      "attributes": {}
     },
     "script": {
       "type": "script",
       "content": "console.log('meow~')",
-      "attributes": []
+      "attributes": {}
     },
     "style": null,
     "template": null

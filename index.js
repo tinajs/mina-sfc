@@ -28,7 +28,7 @@ exports.parse = function parse (source) {
       return {
         type: node.tag,
         content: trim(render(node.content)),
-        attributes: node.attrs || [],
+        attributes: node.attrs || {},
       }
     })
 

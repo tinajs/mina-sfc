@@ -24,21 +24,21 @@ output:
   "_blocks": [{
     "type": "config",
     "content": "{}",
-    "attributes": []
+    "attributes": {}
   }, {
     "type": "script",
     "content": "console.log('meow~')",
-    "attributes": []
+    "attributes": {}
   }],
   "config": {
     "type": "config",
     "content": "{}",
-    "attributes": []
+    "attributes": {}
   },
   "script": {
     "type": "script",
     "content": "console.log('meow~')",
-    "attributes": []
+    "attributes": {}
   },
   "style": null,
   "template": null
@@ -62,10 +62,7 @@ Returns sfc object
 
 - attributes
 
-  The attributes array
-
-  - name
-  - value
+  The attributes object (``[name]: value``)
 
 ### Special Block
 - config
