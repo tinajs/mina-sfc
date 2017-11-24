@@ -9,7 +9,7 @@ npm i --save @tinajs/mina-sfc
 ## Usage
 
 node.js:
-```babel
+```javascript
 const { parse } = require('@tinajs/mina-sfc')
 
 console.log(parse(`
