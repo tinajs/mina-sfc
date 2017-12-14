@@ -76,4 +76,4 @@ Returns sfc object
 - [vue template compiler](https://www.npmjs.com/package/vue-template-compiler)
 
 ## License
-MIT @ [yelo](https://github.com/imyelo)
+MIT &copy; [yelo](https://github.com/imyelo), 2017 - present
