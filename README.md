@@ -1,6 +1,10 @@
 # mina-sfc
 > mina single-file-component for wechat mini program, inspried by vue.js
 
+[![npm](https://img.shields.io/npm/v/@tinajs/mina-sfc.svg?style=flat-square)](https://www.npmjs.com/package/@tinajs/mina-sfc)
+[![license](https://img.shields.io/github/license/tinajs/mina-sfc.svg?style=flat-square)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
 ## Installation
 ```bash
 npm i --save @tinajs/mina-sfc
