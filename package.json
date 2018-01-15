@@ -1,24 +1,28 @@
 {
   "name": "@tinajs/mina-sfc",
   "version": "0.2.0",
-  "description": "",
+  "description": "mina single-file-component for wechat mini program, inspried by vue.js",
   "main": "index.js",
   "scripts": {
     "test": "ava"
   },
   "author": "yelo",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "url": "tinajs/mina-sfc",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/tinajs/mina-sfc/issues"
+  },
+  "homepage": "https://github.com/tinajs/mina-sfc#readme",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tinajs/mina-sfc.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tinajs/mina-sfc/issues"
   },
   "dependencies": {
     "lodash.findlast": "^4.6.0",
