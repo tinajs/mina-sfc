@@ -1,6 +1,6 @@
 {
   "name": "@tinajs/mina-sfc",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "mina single-file-component for wechat mini program, inspried by vue.js",
   "main": "index.js",
   "scripts": {
